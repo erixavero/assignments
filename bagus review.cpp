@@ -1,6 +1,7 @@
 // page 79 no. 2-
 
 #include<iostream>
+#include<iomanip>
 using namespace std;
 
 void num2();
@@ -14,10 +15,17 @@ void num9();
 void num10();
 void num11();
 void num12();
+void num13();
+void num14();
+void num15();
+void num16();
+void num17();
+void num18();
 
 int main(){
 	int choice;
-	cout<<"Enter number 2- : ";
+	do{
+	cout<<"Enter number 2-18 : ";
 	cin>>choice;
 	switch(choice){
 	case 2 : num2();break;
@@ -31,13 +39,20 @@ int main(){
 	case 10 : num10();break;
 	case 11 : num11();break;
 	case 12 : num12();break;
-	}
+	case 13 : num13();break;
+	case 14 : num14();break;
+	case 15 : num15();break;
+	case 16 : num16();break;
+	case 17 : num17();break;
+	case 18 : num18();break;
+	}}while(choice<=18 && choice>=2);
 return 0;}
 
 void num2(){
 	const int sales= 8600000;
 	int eastCoast= sales*58/100;
 	cout <<"East Coast generates $ "<<eastCoast;
+	cout<<endl;
 }
 
 void num3(){
@@ -46,6 +61,7 @@ void num3(){
 	int countryTax= pay*2/100;
 	cout << "purchase is $ " <<pay <<" total is $ "
 	<<pay+stateTax+countryTax;
+	cout<<endl;
 }
 
 void num4(){
@@ -58,11 +74,13 @@ void num4(){
 		<<"tax $ " <<tax <<endl
 		<<"tip $ " <<tip <<endl
 		<<"total $ " <<total;
+		cout<<endl;
 }
 
 void num5(){
 	double sum= 28+32+37+24+33;
 	cout <<sum/5;
+	cout<<endl;
 }
 
 void num6(){
@@ -70,6 +88,7 @@ void num6(){
 	const double payPeriod= 26;
 	double annualPay= 2200.0*26;
 	cout<<"Annual pay: $ "<<annualPay;
+	cout<<endl;
 }
 
 void num7(){
@@ -78,6 +97,7 @@ void num7(){
 		<<"in 7 years sea level will rise by " <<rise*7 <<"mm" <<endl
 		<<"in 10 years sea level will rise by " <<rise*10 <<"mm" <<endl
 		<<"Do something, you monster!";
+		cout<<endl;
 }
 
 void num8(){
@@ -97,6 +117,7 @@ void num8(){
 		<<"subtotal $ " <<sum <<endl
 		<<"tax $ " <<tax <<endl
 		<<"total $ " <<total;
+		cout<<endl;
 }
 
 void num9(){
@@ -104,6 +125,7 @@ void num9(){
 		<<"int size: " <<sizeof(int) <<" bytes" <<endl
 		<<"double size: " <<sizeof(double) <<" bytes" <<endl
 		<<"float size: " <<sizeof(float)<<" bytes";
+		cout<<endl;
 }
 
 void num10(){
@@ -111,6 +133,7 @@ void num10(){
 	const int distance= 375;
 	int mpg= distance/gallons;
 	cout<<"MPG: " <<mpg;
+	cout<<endl;
 }
 
 void num11(){
@@ -120,6 +143,7 @@ void num11(){
 	 
 	cout<<"Distance in town: " <<gallons*avgTown <<" miles" <<endl
 		<<"Distance on highway: " <<gallons*avgHigh <<" miles";
+		cout<<endl;
 }
 
 void num12(){
@@ -128,4 +152,59 @@ void num12(){
 	
 	double calc= land/oneAcre;
 	cout <<"391,876 sq feet equals to " <<calc <<" acres";
+	cout<<endl;
+}
+
+void num13(){
+	const double cost= 14.95;
+	double profit= cost*35/100;
+	double sell= cost+profit;
+	cout<<"selling price is $ " <<sell;
+	cout<<endl;
+}
+
+void num14(){
+	cout <<"name: Ryan Fitzgerald" <<endl
+		<<"address: Dreamer 34 st" <<endl
+		<<"city: Metropolis" <<endl
+		<<"state: MURICA!" <<endl
+		<<"ZIP: 1058183" <<endl
+		<<"phone: 1-800-BITE-ME" <<endl
+		<<"Major: Loser" <<endl;
+}
+
+void num15(){
+	cout <<setw(4)<<"*"<<endl;
+	cout<<setw(5)<<"***"<<endl;
+	cout<<setw(6)<<"*****"<<endl;
+	cout<<"*******"<<endl;
+}
+
+void num16(){
+	cout <<setw(4)<<"*"<<endl;
+	cout<<setw(5)<<"***"<<endl;
+	cout<<setw(6)<<"*****"<<endl;
+	cout<<"*******"<<endl;
+	cout<<setw(6)<<"*****"<<endl;
+	cout<<setw(5)<<"***"<<endl;
+	cout <<setw(4)<<"*"<<endl;
+}
+
+void num17(){
+	const int shares= 750;
+	const double price= 35.00;
+	double subtotal= shares*price;
+	double commission= subtotal*2/100;
+	cout<<"Stock subtotal: $ " <<subtotal <<endl
+		<<"Stock commission: $ "<<commission <<endl
+		<<"Stock total: $ " <<subtotal+commission <<endl;
+}
+
+void num18(){
+	const int survey= 16500;
+	int energyJunkie= 16500*15/100;
+	int citrusLover= energyJunkie*58/100;
+	
+	cout<<"Approx amount of energy drink junkie: " <<energyJunkie <<endl
+		<<"Approx amount of citrus lover: " <<citrusLover <<endl;
 }
