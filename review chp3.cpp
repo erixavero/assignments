@@ -16,6 +16,11 @@ void num10();
 void num11();
 void num12();
 void num13();
+void num14();
+void num15();
+void num16();
+void num17();
+void num18();
 
 int main(){
 	int choice;
@@ -34,30 +39,37 @@ int main(){
 	case 9 : num9();break;	
 	case 10 : num10();break;
 	case 11 : num11();break;
-//	case 12 : num12();break;
-//	case 13 : num13();break;
+	case 12 : num12();break;
+	case 13 : num13();break;
+	case 14 : num14();break;
+//	case 15 : num15();break;
+//	case 16 : num16();break;
+//	case 17 : num17();break;
+//	case 18 : num18();break;
 	}}
 	while(choice>0 && choice<25);
 return 0;}
 
 void num1(){
 	double gallons, distance;
+	cout<<"GAS MILEAGE" <<endl;
 	cout<<"enter gallons of gas: "; cin>>gallons;
 	cout<<"enter distance driven: "; cin>>distance;
 	
 	double mileage= distance/gallons;
-	cout<<"distance achieved per gallon: " <<mileage <<"miles/gallon";
+	cout<<"distance achieved per gallon: " <<mileage <<" miles/gallon";
 cout<<endl;}
 
 void num2(){
+	cout<<"TICKET COUNTER\n";
 	int classA= 15;
 	int classB= 12;
 	int classC= 9;
 	
 	int ticketA, ticketB, ticketC;
-	cout<<"Class A tickets sold: $ "; cin>>ticketA;
-	cout<<"Class B tickets sold: $ "; cin>>ticketB;
-	cout<<"Class C tickets sold: $ "; cin>>ticketC;
+	cout<<"Class A tickets sold: "; cin>>ticketA;
+	cout<<"Class B tickets sold: "; cin>>ticketB;
+	cout<<"Class C tickets sold: "; cin>>ticketC;
 	
 	double income= classA*ticketA +classB*ticketB + classC*ticketC;
 	cout<<fixed <<setprecision(2) <<showpoint;
@@ -65,6 +77,7 @@ void num2(){
 cout<<endl;}
 
 void num3(){
+	cout<<endl <<"SCORE COUNTER\n";
 	double score, total;
 	for(int i=0; i<5;i++){
 		cout<<"insert score "; cin>>score;
@@ -75,6 +88,7 @@ void num3(){
 cout<<endl;}
 
 void num4(){
+	cout<<"RAIN RATE\n";
 	string month[3];
 	double rain[3];
 	for(int i=0; i<3; i++){
@@ -88,6 +102,7 @@ void num4(){
 cout<<endl;}
 
 void num5(){
+	cout<<"GENDER STATS\n";
 	float male, female;
 	cout<<"Male students: "; cin>>male;
 	cout<<"Female students: "; cin>>female;
@@ -98,6 +113,7 @@ void num5(){
 cout<<endl;}
 
 void num6(){
+	cout<<"LET'S MAKE A COOKIE\n";
 	float sugar= 1.5, butter= 1, flour= 2.75;
 	float cookie= 48;
 	float cookiesGoal;
@@ -110,11 +126,12 @@ void num6(){
 cout<<endl;}
 
 void num7(){
+	cout<<"THEATER\n";
 	string movie;
 	double adultPrice= 10, childPrice= 6;
 	int adultSold, childSold;
 	
-	cout<<"Movie name: " <<setw(17) <<" "; getline(cin,movie); //somehow can't enter string with getline
+	cout<<"Movie name: " <<setw(17) <<" "; cin>>movie; //somehow can't enter string with getline
 	cout<<"Adult tickets sold: "<<setw(9) <<" "; cin>>adultSold;
 	cout<<"Child tickets sold: "<<setw(9) <<" "; cin>>childSold;
 	
@@ -140,6 +157,7 @@ void num8(){
 cout<<endl;}
 
 void num9(){
+	cout<<"COOKIE CALORIE\n";
 	int cookiesEaten;
 	int cookie= 30, serving=10, cals= 300;
 	double cookiesPerServ= cookie/serving;
@@ -151,10 +169,11 @@ void num9(){
 cout<<endl;}
 
 void num10(){
-	
-	
-	
-	
+	double repCost;
+	cout<<"Insurance Fraud" <<endl;
+	cout<<"Enter replacement cost: $ "; cin>>repCost;
+	double insurance= repCost*80/100;
+	cout<<"Minimum property insurance insurance: $ " <<insurance;
 cout<<endl;}
 
 void num11(){
@@ -172,3 +191,25 @@ void num11(){
 	cout<<"Annual cost:  $ " <<monthlyPay*12;
 cout<<endl;}
 
+void num12(){
+	cout<<"Temper Conver" <<endl;
+	float celcius;
+	cout<<"Temperature in celcius: "; cin>>celcius;
+	float fahr= celcius*9/5+32;
+	cout<<"In Fahrenheit: " <<fahr <<" F";
+cout<<endl;}
+
+void num13(){
+	cout<<"C.R.E.A.M: Cash Rules Everything Around Me\n";
+	const float YEN_PER_DOLLAR= 98.93,
+				EUROS_PER_DOLLAR= 0.74;
+	int dollar;
+	cout<<"Enter your money: $ "; cin>>dollar;
+	cout<<"in Yen: " <<dollar*YEN_PER_DOLLAR <<endl;
+	cout<<"in Euro: " <<dollar*EUROS_PER_DOLLAR;
+cout<<endl;}
+
+void num14(){
+	
+	
+cout<<endl;}
